@@ -172,7 +172,7 @@
                     <span class="icon-edit" onclick="editBook('${buku.id}')" title="Sunting Buku">✏️ Sunting</span>
                     <span class="icon-delete" onclick="deleteBook('${buku.id}')" title="Hapus Buku">🗑️ Hapus</span>
                 </div>
-                <a href="index8.html" class="tombol-kembali">Kembali ke Katalog</a>
+                <a href="index.html" class="tombol-kembali">Kembali ke Katalog</a>
             `;
 
             document.getElementById('wadahDetail').innerHTML = html;
@@ -187,18 +187,18 @@
                     <img src="https://via.placeholder.com/200x300/cccccc/333333?text=Cover+Tidak+Tersedia" alt="Cover tidak tersedia">
                 </div>
                 <p>Maaf, buku yang Anda cari tidak tersedia. Coba kembali ke katalog dan pilih buku lain.</p>
-                <a href="index8.html" class="tombol-kembali">Kembali ke Katalog</a>
+                <a href="index.html" class="tombol-kembali">Kembali ke Katalog</a>
             `;
         }
 
         function editBook(id) {
-            window.location.href = `index8.html?edit=${encodeURIComponent(id)}`;
+            window.location.href = `index.html?edit=${encodeURIComponent(id)}`;
         }
 
         function deleteBook(id) {
             if (!confirm('Yakin ingin menghapus buku ini?')) return;
             deleteBookFromStorage(id);
-            window.location.href = 'index8.html';
+            window.location.href = 'index.html';
         }
 
         const id = getQueryParam('id');
